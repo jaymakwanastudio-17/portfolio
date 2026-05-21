@@ -118,6 +118,22 @@ fetchpriority="high" alt style="display:block;width:100%;height:100%;border-radi
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
+	<script>
+window.addEventListener("load", () => {
+  document.querySelectorAll("img").forEach(img => {
+    if (img.src.includes("framerusercontent.com")) {
+      img.loading = "eager";
+      img.fetchPriority = "high";
+
+      const src = img.src;
+      img.src = "";
+      setTimeout(() => {
+        img.src = src;
+      }, 50);
+    }
+  });
+});
+</script>
 </body>
 
 <!-- Mirrored from jay-makwana-portfolio.framer.website/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 May 2026 20:16:05 GMT -->
