@@ -7,6 +7,14 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/projects/:slug",
+      "destination": "/projects/:slug.html"
+    },
+    {
+      "source": "/:path",
+      "destination": "/:path.html"
     }
   ]
 }
